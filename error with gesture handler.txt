@@ -1,0 +1,49 @@
+PS D:\Soft Project\front\swg> react-native run-android
+info Running jetifier to migrate libraries to AndroidX. You can disable it using "--no-jetifier" flag.
+Jetifier found 935 file(s) to forward-jetify. Using 8 workers...
+info Starting JS server...
+info Installing the app...
+> Task :react-native-gesture-handler:compileDebugJavaWithJavac FAILED
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 6.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/5.4.1/userguide/command_line_interface.html#sec:command_line_warnings
+16 actionable tasks: 2 executed, 14 up-to-date
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':react-native-gesture-handler:compileDebugJavaWithJavac'.     
+> Could not find tools.jar. Please check that C:\Program Files (x86)\Java\jre1.8.0_221 contains a valid JDK installation.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 4s
+
+error Failed to install the app. Make sure you have the Android development environment set up: https://facebook.github.io/react-native/docs/getting-started.html#android-development-environment. Run CLI with --verbose flag for more details.
+Error: Command failed: gradlew.bat app:installDebug -PreactNativeDevServerPort=8081      
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':react-native-gesture-handler:compileDebugJavaWithJavac'.     
+> Could not find tools.jar. Please check that C:\Program Files (x86)\Java\jre1.8.0_221 contains a valid JDK installation.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 4s
+
+    at checkExecSyncError (child_process.js:621:11)
+    at execFileSync (child_process.js:639:15)
+    at runOnAllDevices (D:\Soft Project\front\swg\node_modules\@react-native-community\cli-platform-android\build\commands\runAndroid\runOnAllDevices.js:74:39)
+    at buildAndRun (D:\Soft Project\front\swg\node_modules\@react-native-community\cli-platform-android\build\commands\runAndroid\index.js:158:41)
+    at D:\Soft Project\front\swg\node_modules\@react-native-community\cli-platform-android\build\commands\runAndroid\index.js:125:12
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+    at async Command.handleAction (D:\Soft Project\front\swg\node_modules\react-native\node_modules\@react-native-community\cli\build\cliEntry.js:160:7)       
+PS D:\Soft Project\front\swg>

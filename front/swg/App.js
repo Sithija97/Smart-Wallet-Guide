@@ -1,12 +1,28 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import {createStackNavigator, createAppContainer, createDrawerNavigator} from 'react-navigation';
+
+import HomeScreen from './components/screens/Home';
+import CategoryScreen from './components/screens/Category';
+import WelcomeScreen from './components/screens/Welcome';
 
 export default class App extends Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Hello, Sithija!</Text>
-      </View>
+      <AppContainer/>
     );
   }
 }
+
+const AppDrawerNavigator = createDrawerNavigator({
+  Home: {screen: HomeScreen},
+  Category:{screen: CategoryScreen}
+
+});
+
+const AppStackNavigator = createStackNavigator({
+  Welcome:{screen: WelcomeScreen},
+  Home: {screen: AppDrawerNavigator},
+
+});
+
+const AppContainer = createAppContainer(AppStackNavigator);
