@@ -7,7 +7,7 @@
  */
 
 import React, {Fragment} from 'react';
-import {createAppContainer, createDrawerNavigator} from 'react-navigation'
+import {createAppContainer, createDrawerNavigator, createStackNavigator} from 'react-navigation'
 
 import {
   SafeAreaView,
@@ -16,7 +16,8 @@ import {
   View,
   Text,
   StatusBar,
-  TouchableOpacity
+  TouchableOpacity,
+  Button
 } from 'react-native';
 
 import {
@@ -27,11 +28,27 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+class WelcomeScreen extends React.Component {
+  render() {
+  return (
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text>Hello, Welcome to SWG!</Text>
+      <TouchableOpacity 
+             onPress={() => this.props.navigation.navigate('Home')}>
+                <Text>
+                    Go to Home
+                </Text>
+            </TouchableOpacity>
+    </View>
+  );
+}
+}
+
 class HomeScreen extends React.Component {
     render() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Hello, world!</Text>
+        <Text>Home</Text>
         <TouchableOpacity onPress={this.props.navigation.openDrawer}>
           <Text>Open Drawer</Text>
         </TouchableOpacity>
@@ -53,7 +70,7 @@ class SettingsScreen extends React.Component {
   }
 }
 
-const DrawerNavigator = createDrawerNavigator(
+const AppDrawerNavigator = createDrawerNavigator(
   {
     Home: HomeScreen,
     Settings: SettingsScreen,
@@ -69,6 +86,10 @@ const DrawerNavigator = createDrawerNavigator(
   }
 );
 
+const AppStackNavigator = createStackNavigator({
+  Welcome:WelcomeScreen,
+  Home: AppDrawerNavigator,
+});
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -110,4 +131,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default createAppContainer(DrawerNavigator);
+export default createAppContainer(AppStackNavigator);
