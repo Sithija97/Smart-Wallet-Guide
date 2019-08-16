@@ -1,13 +1,28 @@
 import React, {Fragment} from 'react';
-import { StyleSheet,View,Text,TouchableOpacity,} from 'react-native';
+import { StyleSheet,View,Text,TouchableOpacity,ImageBackground,Image} from 'react-native';
 
   export default class WelcomeScreen extends React.Component {
     static navigationOptions = {
       header: null
   }
     render() {
-    return (
+    return (    
+      <ImageBackground
+        source={require('./back.jpg')}
+        style={styles.container}>
+
       <View style={styles.container}>
+
+              <View style={styles.logoContainer}>
+                  <Image
+                        style={styles.logo}
+                       source ={require('./icon.png')}
+                   />
+
+                <Text style={styles.logoTitle}>"because money matters"</Text>
+
+              </View>
+
             <TouchableOpacity 
                 style={styles.buttonContainer} 
                 onPress={() => this.props.navigation.navigate('Login')}>
@@ -23,6 +38,7 @@ import { StyleSheet,View,Text,TouchableOpacity,} from 'react-native';
                   </Text>
             </TouchableOpacity>
       </View>
+      </ImageBackground>
     );
   }
 }
@@ -44,5 +60,24 @@ const styles =StyleSheet.create({
     },
     ButtonText:{
         fontWeight:'bold'
-    }
+    },
+    logo:{
+      width:180,
+      height:180
+    },
+    logoContainer:{
+      flexGrow: 1,
+      alignItems:'center',
+      justifyContent: 'center',
+    },
+    logoTitle:{
+      //color:'#3c40c6',
+      marginTop:10,
+      width:160,
+      textAlign:'center',
+      opacity:0.9,
+      fontWeight: 'bold',
+      fontStyle: 'italic',
+      
+    },
 });

@@ -29,7 +29,7 @@ const AppDrawerNavigator = createDrawerNavigator(
     //overlayColor: '#ffff',
     contentOptions: {
       activeTintColor: '#fff',
-      activeBackgroundColor: '#EA2027',
+      activeBackgroundColor: '#be2128',
     },
   }
 );
@@ -43,7 +43,7 @@ const AppStackNavigator = createStackNavigator({
 {
   defaultNavigationOptions:{
     headerStyle:{
-      backgroundColor:'#EA2027'
+      backgroundColor:'#be2128'
     }
   }
 });
