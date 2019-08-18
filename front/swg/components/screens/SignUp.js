@@ -22,7 +22,7 @@ export default class SignUpScreen extends React.Component {
         
         <TouchableOpacity 
             style={styles.buttonContainer} 
-            onPress={() => this.props.navigation.navigate('Home')}>
+            onPress={() => this.props.navigation.navigate('Category')}>
                 <Text style={styles.title}>
                     SIGN IN
                 </Text>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer:{
     alignItems: 'center',
-    backgroundColor: '#EA2027',
+    backgroundColor: '#9980FA',
     padding: 8,
     marginBottom:50,
     borderRadius:10,

@@ -15,6 +15,7 @@ import CategoryScreen from './components/screens/Category';
 import LoginScreen from './components/screens/Login';
 import SignUpScreen from './components/screens/SignUp';
 import AboutUsScreen from './components/screens/AboutUs';
+import PlansScreen from './components/screens/Plans';
 
 
 const AppDrawerNavigator = createDrawerNavigator(
@@ -29,7 +30,7 @@ const AppDrawerNavigator = createDrawerNavigator(
     //overlayColor: '#ffff',
     contentOptions: {
       activeTintColor: '#fff',
-      activeBackgroundColor: '#be2128',
+      activeBackgroundColor: '#9980FA',
     },
   }
 );
@@ -38,12 +39,14 @@ const AppStackNavigator = createStackNavigator({
   Welcome:WelcomeScreen,
   Login:LoginScreen,
   SignUp:SignUpScreen,
+  Category:CategoryScreen,
+  Plans:PlansScreen,
   Home: AppDrawerNavigator,
 },
 {
   defaultNavigationOptions:{
     headerStyle:{
-      backgroundColor:'#be2128'
+      backgroundColor:'#9980FA'
     }
   }
 });

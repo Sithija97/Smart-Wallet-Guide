@@ -8,7 +8,7 @@ import { StyleSheet,View,Text,TouchableOpacity,ImageBackground,Image} from 'reac
     render() {
     return (    
       <ImageBackground
-        source={require('./back.jpg')}
+        source={require('./back1.jpg')}
         style={styles.container}>
 
       <View style={styles.container}>
@@ -25,14 +25,14 @@ import { StyleSheet,View,Text,TouchableOpacity,ImageBackground,Image} from 'reac
 
             <TouchableOpacity 
                 style={styles.buttonContainer} 
-                onPress={() => this.props.navigation.navigate('Login')}>
+                onPress={() => this.props.navigation.navigate('SignUp')}>
                   <Text style={styles.ButtonText}>
                       New to Smart Wallet Guide
                   </Text>
             </TouchableOpacity>
             <TouchableOpacity 
                 style={styles.buttonContainer} 
-                onPress={() => this.props.navigation.navigate('SignUp')}>
+                onPress={() => this.props.navigation.navigate('Login')}>
                   <Text style={styles.ButtonText}>
                       Already Using Smart Wallet Guide
                   </Text>
