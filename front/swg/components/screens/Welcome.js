@@ -12,6 +12,9 @@ import { createStackNavigator, createDrawerNavigator, createAppContainer} from '
 
 
 export default class WellcomeScreen extends React.Component{
+  static navigationOptions = {
+    header: null
+}
   render(){
     return(
       <ImageBackground

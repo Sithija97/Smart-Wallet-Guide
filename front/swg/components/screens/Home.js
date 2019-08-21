@@ -11,6 +11,9 @@ import { StyleSheet,View,Text,TouchableOpacity,Button} from 'react-native';
 
 
 export default class HomeScreen extends React.Component{
+  static navigationOptions = {
+    header: null
+}
   render(){
     return(
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
