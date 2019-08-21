@@ -13,9 +13,6 @@ export default class CategoryScreen extends React.Component {
                 </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={this.props.navigation.openDrawer}>
-            <Text>Open Drawer</Text>
-          </TouchableOpacity>
           <Text style={{ fontWeight: 'bold', marginTop: 20 }}>Category</Text>
         </View>
       );

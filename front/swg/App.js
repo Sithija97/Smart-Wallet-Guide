@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React, {Fragment} from 'react';
+import React, {Fragment,Component} from 'react';
 import {createAppContainer, createDrawerNavigator, createStackNavigator} from 'react-navigation'
 
 import WelcomeScreen from './components/screens/Welcome';
@@ -17,10 +17,9 @@ import SignUpScreen from './components/screens/SignUp';
 import AboutUsScreen from './components/screens/AboutUs';
 import PlansScreen from './components/screens/Plans';
 
-
 const AppDrawerNavigator = createDrawerNavigator(
   {
-    Home: HomeScreen,
+    Home: {screen: HomeScreen},
     Category: CategoryScreen,
     AboutUs: AboutUsScreen
   },
@@ -45,9 +44,7 @@ const AppStackNavigator = createStackNavigator({
 },
 {
   defaultNavigationOptions:{
-    headerStyle:{
-      backgroundColor:'#9980FA'
-    }
+    header:null
   }
 });
 

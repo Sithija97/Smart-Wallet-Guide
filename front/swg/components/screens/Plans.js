@@ -12,10 +12,7 @@ export default class PlansScreen extends React.Component {
                     Next
                 </Text>
         </TouchableOpacity>
-
-          <TouchableOpacity onPress={this.props.navigation.openDrawer}>
-            <Text>Open Drawer</Text>
-          </TouchableOpacity>
+        
           <Text style={{ fontWeight: 'bold', marginTop: 20 }}>Plans</Text>
         </View>
       );
