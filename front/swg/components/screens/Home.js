@@ -1,9 +1,18 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
+
 import React, {Fragment} from 'react';
 import { StyleSheet,View,Text,TouchableOpacity,Button} from 'react-native';
 
-export default class HomeScreen extends React.Component {
-    render() {
-    return (
+
+export default class HomeScreen extends React.Component{
+  render(){
+    return(
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <Text>Home</Text>
         <TouchableOpacity onPress={this.props.navigation.openDrawer}>
@@ -12,4 +21,9 @@ export default class HomeScreen extends React.Component {
       </View>
     );
   }
-}
+};
+
+const styles = StyleSheet.create({
+
+});
+

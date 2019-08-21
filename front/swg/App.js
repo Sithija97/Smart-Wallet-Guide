@@ -6,22 +6,36 @@
  * @flow
  */
 
-import React, {Fragment,Component} from 'react';
-import {createAppContainer, createDrawerNavigator, createStackNavigator} from 'react-navigation'
+import React, {Fragment} from 'react';
+import { StyleSheet, View,Text,ImageBackground} from 'react-native';
 
-import WelcomeScreen from './components/screens/Welcome';
+import { createStackNavigator, createAppContainer, createDrawerNavigator } from 'react-navigation';
+
+import WellcomeScreen from './components/screens/Welcome';
 import HomeScreen from './components/screens/Home';
 import CategoryScreen from './components/screens/Category';
 import LoginScreen from './components/screens/Login';
 import SignUpScreen from './components/screens/SignUp';
 import AboutUsScreen from './components/screens/AboutUs';
 import PlansScreen from './components/screens/Plans';
+import CalanderScreen from './components/screens/Calander';
+import LocationScreen from './components/screens/Locations';
+
+export default class App extends React.Component{
+  render(){
+    return(
+      <AppConatiner/>
+    );
+  }
+};
 
 const AppDrawerNavigator = createDrawerNavigator(
   {
-    Home: {screen: HomeScreen},
-    Category: CategoryScreen,
-    AboutUs: AboutUsScreen
+    Home:HomeScreen,
+    Calander:CalanderScreen,
+    Location:LocationScreen,
+    AboutUs:AboutUsScreen,
+
   },
   {
     hideStatusBar: true,
@@ -35,17 +49,15 @@ const AppDrawerNavigator = createDrawerNavigator(
 );
 
 const AppStackNavigator = createStackNavigator({
-  Welcome:WelcomeScreen,
+  Welcome:{screen: WellcomeScreen},
   Login:LoginScreen,
   SignUp:SignUpScreen,
   Category:CategoryScreen,
   Plans:PlansScreen,
-  Home: AppDrawerNavigator,
-},
-{
-  defaultNavigationOptions:{
-    header:null
-  }
+  Calander:{screen: CalanderScreen},
+  Location:{screen: LocationScreen},
+  AboutUs:{screen: AboutUsScreen},
+  Home: {screen: AppDrawerNavigator}
 });
 
-export default createAppContainer(AppStackNavigator);
+const AppConatiner = createAppContainer(AppStackNavigator);

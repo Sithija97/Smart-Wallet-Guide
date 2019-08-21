@@ -5,15 +5,16 @@ export default class PlansScreen extends React.Component {
     render() {
       return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <TouchableOpacity 
-            style={styles.buttonContainer} 
-            onPress={() => this.props.navigation.navigate('Home')}>
-                <Text style={styles.ButtonText}>
-                    Next
-                </Text>
-        </TouchableOpacity>
-        
-          <Text style={{ fontWeight: 'bold', marginTop: 20 }}>Plans</Text>
+
+            <Text style={{ fontWeight: 'bold', marginTop: 20 }}>Plans</Text>
+              <TouchableOpacity 
+                style={styles.buttonContainer} 
+                onPress={() => this.props.navigation.navigate('Home')}>
+                    <Text style={styles.ButtonText}>
+                        Next
+                    </Text>
+            </TouchableOpacity>
+            
         </View>
       );
     }

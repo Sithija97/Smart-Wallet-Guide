@@ -5,16 +5,17 @@ export default class CategoryScreen extends React.Component {
     render() {
       return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+
+        <Text style={{ fontWeight: 'bold', marginTop: 20 }}>Category</Text>
           <TouchableOpacity 
             style={styles.buttonContainer} 
             onPress={() => this.props.navigation.navigate('Plans')}>
                 <Text style={styles.ButtonText}>
                     Next
                 </Text>
-          </TouchableOpacity>
-
-          <Text style={{ fontWeight: 'bold', marginTop: 20 }}>Category</Text>
-        </View>
+        </TouchableOpacity>
+        
+    </View>
       );
     }
   }
