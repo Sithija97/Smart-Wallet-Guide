@@ -17,31 +17,36 @@ export default class CalanderScreen extends React.Component{
           endDate="2018-05-05"
           theme={{
             weekColumnTextStyle: {
-              color: 'red',
+              color: '#8854d0',
+              fontWeight:'bold'
             },
             weekColumnStyle: {
               paddingVertical: 20,
             },
             weekColumnsContainerStyle: {
-              backgroundColor: 'lightgrey',
+              backgroundColor: '#f1f2f6',
             },
             monthTitleStyle: {
-              color: 'blue',
+              color: '#3c40c6',
+              fontWeight:'bold'
             },
             nonTouchableDayContainerStyle: {
-              backgroundColor: 'red',
+              backgroundColor: '#c56cf0',
             },
             nonTouchableDayTextStyle: {
-              color: 'green',
+              color: '#ffffff',
+              fontWeight:'bold'
             },
             dayTextStyle: {
-              color: 'blue',
+              color: '#1e272e',
+              fontWeight:'bold'
             },
             activeDayContainerStyle: {
-              backgroundColor: 'lightgrey',
+              backgroundColor: '#f1f2f6',
             },
             activeDayTextStyle: {
-              color: 'red',
+              color: '#3742fa',
+              fontWeight:'bold'
             },
           }}
         />

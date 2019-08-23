@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 
-export default class App extends React.Component {
+export default class CalculatorScreen extends React.Component {
   constructor(){
     super();
     this.state={
@@ -143,13 +143,13 @@ const styles = StyleSheet.create({
     },
     result: {
       flex: 2,
-      backgroundColor: '#8bc2f9',
+      backgroundColor: '#9c88ff',
       justifyContent: 'center',
       alignItems: 'flex-end'
     },
     calculation: {
       flex: 1,
-      backgroundColor: '#4ba0f4',
+      backgroundColor: '#8c7ae6',
       justifyContent: 'center',
       alignItems: 'flex-end'
     },
@@ -159,12 +159,12 @@ const styles = StyleSheet.create({
     },
     numbers: {
       flex: 3,
-      backgroundColor: '#82868c'
+      backgroundColor: '#a5b1c2'
     },
     operations: {
       flex: 1,
       justifyContent: 'space-around',
       alignItems: 'stretch',
-      backgroundColor: '#b8babc'
+      backgroundColor: '#d1d8e0'
     }
 });
