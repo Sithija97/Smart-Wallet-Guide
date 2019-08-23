@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import { StyleSheet,View,Text,TouchableOpacity,} from 'react-native';
+import { StyleSheet,View,Text,TouchableOpacity,ImageBackground} from 'react-native';
 
 //importing form
 import FormScreen from './Form';
@@ -7,27 +7,34 @@ import FormScreen from './Form';
 export default class LoginScreen extends React.Component {
   render() {
     return (
-      <View style ={styles.container}>
-
-        <View style={{alignItems:'center',marginBottom:60}}>
-          <Text style={styles.textsmd}>
-            Sign in 
-          </Text>
-         </View>
-
-        <View style ={styles.FormContainer}>
-              <FormScreen/>
-        </View>
+      <ImageBackground
+      source={require('./SignUp&In.jpg')}
+      style={styles.container}>
 
         
-        <TouchableOpacity 
-            style={styles.buttonContainer} 
-            onPress={() => this.props.navigation.navigate('Home')}>
-                <Text style={styles.title}>
-                    SIGN IN
-                </Text>
-        </TouchableOpacity>
-      </View>
+        <View>
+
+          <View style={{alignItems:'center',marginBottom:60}}>
+            <Text style={styles.textsmd}>
+              Sign in 
+            </Text>
+          </View>
+
+          <View style ={styles.FormContainer}>
+                <FormScreen/>
+          </View>
+
+          
+          <TouchableOpacity 
+              style={styles.buttonContainer} 
+              onPress={() => this.props.navigation.navigate('Home')}>
+                  <Text style={styles.title}>
+                      SIGN IN
+                  </Text>
+          </TouchableOpacity>
+        </View>
+        
+      </ImageBackground>
     );
   }
 }

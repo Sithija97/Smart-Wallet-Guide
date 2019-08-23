@@ -7,7 +7,7 @@
  */
 
 import React, {Fragment} from 'react';
-import { StyleSheet,View,Text,TouchableOpacity,Button} from 'react-native';
+import { StyleSheet,View,Text,TouchableOpacity,Button,ImageBackground} from 'react-native';
 
 
 export default class HomeScreen extends React.Component{
@@ -16,17 +16,26 @@ export default class HomeScreen extends React.Component{
 }
   render(){
     return(
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Home</Text>
-        <TouchableOpacity onPress={this.props.navigation.openDrawer}>
-          <Text>Open Drawer</Text>
-        </TouchableOpacity>
-      </View>
+      <ImageBackground
+        source={require('./Home.jpg')}
+        style={styles.container}>
+          <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+            <Text style={{fontWeight:'bold'}}>Home</Text>
+            <TouchableOpacity onPress={this.props.navigation.openDrawer}>
+              <Text>Open Drawer</Text>
+            </TouchableOpacity>
+          </View>
+      </ImageBackground>
     );
   }
 };
 
 const styles = StyleSheet.create({
-
+  container:{
+    flex: 1,
+    justifyContent: 'center',
+    paddingHorizontal: 10,
+    padding:20,
+}
 });
 
