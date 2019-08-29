@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   },
   operations: {
     flex: 1,
-    backgroundColor: colors["blue-dark"]
+    backgroundColor: colors["purple-dark"]
   }
 })
 
