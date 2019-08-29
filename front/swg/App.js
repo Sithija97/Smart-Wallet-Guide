@@ -18,9 +18,11 @@ import LoginScreen from './components/screens/Login';
 import SignUpScreen from './components/screens/SignUp';
 import AboutUsScreen from './components/screens/AboutUs';
 import PlansScreen from './components/screens/Plans';
-import CalanderScreen from './components/screens/Calander';
+import CalanderScreen from './components/screens/calander/Calander';
 import LocationScreen from './components/screens/Locations';
-import CalculatorScreen from './components/screens/Calculator';
+import CalculatorScreen from './components/screens/calculator/Calculator';
+
+
 
 export default class App extends React.Component{
   render(){
@@ -29,6 +31,7 @@ export default class App extends React.Component{
     );
   }
 };
+
 
 const AppDrawerNavigator = createDrawerNavigator(
   {
@@ -49,6 +52,7 @@ const AppDrawerNavigator = createDrawerNavigator(
     },
   }
 );
+
 
 const AppStackNavigator = createStackNavigator({
   Welcome:{screen: WellcomeScreen},
