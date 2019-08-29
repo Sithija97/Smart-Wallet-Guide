@@ -8,7 +8,7 @@
 
 import React, {Fragment} from 'react';
 import { StyleSheet, View,Text,ImageBackground,Image,TouchableOpacity} from 'react-native';
-import { createStackNavigator, createDrawerNavigator, createAppContainer} from 'react-navigation';
+
 
 
 export default class WellcomeScreen extends React.Component{

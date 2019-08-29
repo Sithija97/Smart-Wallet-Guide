@@ -1,16 +1,45 @@
-import React, {Fragment} from 'react';
-import { StyleSheet,View,Text,TouchableOpacity,} from 'react-native';
 
-export default class LocationScreen extends React.Component {
-    render() {
-      return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <TouchableOpacity onPress={this.props.navigation.openDrawer}>
-            <Text>Open Drawer</Text>
-          </TouchableOpacity>
-          <Text style={{ fontWeight: 'bold', marginTop: 20 }}>Location</Text>
-        </View>
-      );
+import React, {Fragment} from 'react';
+import {
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+} from 'react-native';
+
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
+
+const styles = StyleSheet.create({
+ container: {
+   ...StyleSheet.absoluteFillObject,
+   height: '100%',
+   width: '100%',
+   justifyContent: 'flex-end',
+   alignItems: 'center',
+ },
+ map: {
+   ...StyleSheet.absoluteFillObject,
+ },
+});
+
+export default class LocationScreen extends React.Component{
+    render(){
+        return(
+            <View style={styles.container}>
+                <MapView
+                provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+                style={styles.map}
+                region={{
+                    latitude: 6.8511,
+                    longitude: 79.9212,
+                    latitudeDelta: 0.015,
+                    longitudeDelta: 0.0121,
+                }}
+                >
+                </MapView>
+            </View>
+        );
     }
-  }
-  
+}
